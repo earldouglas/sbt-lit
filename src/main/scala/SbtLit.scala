@@ -2,6 +2,7 @@ package com.earldouglas.sbtlit
 
 import sbt.Keys._
 import sbt._
+import sbt.internal.io.Source
 
 object SbtLit extends sbt.AutoPlugin {
 
@@ -9,6 +10,7 @@ object SbtLit extends sbt.AutoPlugin {
   override def trigger = allRequirements
 
   override val projectSettings: Seq[Def.Setting[_]] =
+    Seq(watchSources += new Source((sourceDirectory in Compile).value / "lit", AllPassFilter, NothingFilter)) ++
     inConfig(Compile) {
       sourceGenerators +=
         Def.task({
