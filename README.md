@@ -12,7 +12,7 @@ Add the sbt-lit plugin to your project:
 
 ```scala
 resolvers += Resolver.bintrayIvyRepo("earldouglas", "sbt-plugins")
-addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.2")
+addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.3")
 ```
 
 Write some literate Scala code:
