@@ -21,17 +21,50 @@ Write some literate Scala code:
 <pre>
 # "Hello, world!" in Scala
 
-First, we choose a package name:
+This is a short example of literate programming in Scala.  This Markdown
+file contains Scala snippets that, when collected, compile to a working
+program.
+
+The code in this file lives in the `example` package:
 
 ```scala
 package example
 ```
 
-Next, we write a `main` method by extending the `App` trait:
+The greeting will come from a source of static strings:
 
 ```scala
-object Main extends App {
-  println("Hello, world!")
+import example.data.Strings
+```
+
+The `HelloWorld` object extends the `App` trait, making it runnable by a
+built-in `main` method:
+
+```scala
+object HelloWorld extends App {
+  println(Strings.helloWorld)
+}
+```
+</pre>
+
+*src/main/lit/example/data/Strings.md:*
+
+<pre>
+# Strings
+
+This file contains static strings to be used within the application.
+
+The code lives in the `example.data` package:
+
+```scala
+package example.data
+```
+
+The `Strings` object provides access to the static strings:
+
+```scala
+object Strings {
+  val helloWorld = "Hello, world"
 }
 ```
 </pre>

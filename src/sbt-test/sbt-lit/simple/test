@@ -1,10 +1,12 @@
 > clean
-$ absent target/scala-2.12/src_managed/main/com/example/Main.scala
-$ absent target/scala-2.12/classes/com/example/Main.class
+$ absent target/scala-2.12/src_managed/main/example/HelloWorld.scala
+$ absent target/scala-2.12/src_managed/main/example/data/Strings.scala
+$ absent target/scala-2.12/classes/example/HelloWorld.class
 $ absent target/hello-world.txt
 > compile
-$ exists target/scala-2.12/src_managed/main/com/example/Main.scala
-$ exists target/scala-2.12/classes/com/example/Main.class
+$ exists target/scala-2.12/src_managed/main/example/HelloWorld.scala
+$ exists target/scala-2.12/src_managed/main/example/data/Strings.scala
+$ exists target/scala-2.12/classes/example/HelloWorld.class
 $ absent target/hello-world.txt
 > run
 $ exists target/hello-world.txt
