@@ -12,7 +12,7 @@ Add the sbt-lit plugin to your project:
 
 ```scala
 resolvers += Resolver.bintrayIvyRepo("earldouglas", "sbt-plugins")
-addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.2")
+addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.3")
 ```
 
 Write some literate Scala code:
@@ -78,3 +78,10 @@ $ sbt
 > run
 Hello, world!
 ```
+
+## Configuration
+
+* `litSource` - source directory for literate files
+    * Type: `File`
+    * Default: `litSource := (sourceDirectory in Compile).value / "lit"`
+      *(src/main/lit)*
