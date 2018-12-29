@@ -1,0 +1,10 @@
+> clean
+$ absent target/scala-2.12/src_managed/main/com/example/Main.scala
+$ absent target/scala-2.12/classes/com/example/Main.class
+$ absent target/hello-world.txt
+> compile
+$ exists target/scala-2.12/src_managed/main/com/example/Main.scala
+$ exists target/scala-2.12/classes/com/example/Main.class
+$ absent target/hello-world.txt
+> run
+$ exists target/hello-world.txt
