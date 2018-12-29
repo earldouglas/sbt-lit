@@ -4,29 +4,33 @@ import sbt.Keys._
 import sbt._
 import sbt.internal.io.Source
 
-object SbtLit extends sbt.AutoPlugin {
+object SbtLit extends AutoPlugin {
 
   override def requires = plugins.JvmPlugin
   override def trigger = allRequirements
 
+  object autoImport {
+    lazy val litSource = taskKey[File]("source directory for literate files")
+  }
+
+  import autoImport._
+
   override val projectSettings: Seq[Def.Setting[_]] =
-    Seq(watchSources += new Source((sourceDirectory in Compile).value / "lit", AllPassFilter, NothingFilter)) ++
-    inConfig(Compile) {
+    Seq( watchSources += new Source(litSource.value, AllPassFilter, NothingFilter)
+       , litSource := (sourceDirectory in Compile).value / "lit"
+       ) ++ inConfig(Compile) {
       sourceGenerators +=
         Def.task({
 
-          val sourceDir: File =
-            (sourceDirectory in Compile).value / "lit"
-
           val sourceFiles: Seq[File] =
-            (sourceDir ** "*.md").get
+            (litSource.value ** "*.md").get
 
           val inputsCache: File =
             streams.value.cacheDirectory / "lit-inputs"
 
           val destFiles: Seq[File] =
             sourceFiles.flatMap({ sourceFile =>
-              IO.relativize( sourceDir
+              IO.relativize( litSource.value
                            , sourceFile
                            ) map { sourceRelative =>
 

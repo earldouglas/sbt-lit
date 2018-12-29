@@ -78,3 +78,10 @@ $ sbt
 > run
 Hello, world!
 ```
+
+## Configuration
+
+* `litSource` - source directory for literate files
+    * Type: `File`
+    * Default: `litSource := (sourceDirectory in Compile).value / "lit"`
+      *(src/main/lit)*
