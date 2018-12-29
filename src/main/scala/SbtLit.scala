@@ -1,9 +1,7 @@
 package com.earldouglas.sbtlit
 
-import java.io.FileInputStream
 import sbt.Keys._
 import sbt._
-import scala.io.Source
 
 object SbtLit extends sbt.AutoPlugin {
 
@@ -21,12 +19,11 @@ object SbtLit extends sbt.AutoPlugin {
           val sourceFiles: Seq[File] =
             (sourceDir ** "*.md").get
 
+          val inputsCache: File =
+            streams.value.cacheDirectory / "lit-inputs"
+
           val destFiles: Seq[File] =
             sourceFiles.flatMap({ sourceFile =>
-
-              val input: String =
-                Source.fromInputStream(new FileInputStream(sourceFile)).mkString
-
               IO.relativize( sourceDir
                            , sourceFile
                            ) map { sourceRelative =>
@@ -39,11 +36,19 @@ object SbtLit extends sbt.AutoPlugin {
                             , destRelative
                             )
 
-                  val output: String = Extract(input, "scala")
-                  IO.write(destFile, output)
+                val tracker =
+                  Tracked.inputChanged(inputsCache / sourceRelative)({ (inChanged, _: HashFileInfo) =>
+                    if (inChanged || !destFile.exists) {
+                      val input: String = IO.read(sourceFile)
+                      val output: String = Extract(input, "scala")
+                      IO.write(destFile, output)
+                    }
+                  })
 
-                  destFile
-                }
+                tracker(FileInfo.hash(sourceFile))
+
+                destFile
+              }
             })
             
           destFiles
