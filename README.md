@@ -18,7 +18,7 @@ Write some literate Scala code:
 
 *src/main/lit/example/HelloWorld.md:*
 
-<pre>
+````markdown
 # "Hello, world!" in Scala
 
 This is a short example of literate programming in Scala.  This Markdown
@@ -45,11 +45,11 @@ object HelloWorld extends App {
   println(Strings.helloWorld)
 }
 ```
-</pre>
+````
 
 *src/main/lit/example/data/Strings.md:*
 
-<pre>
+````markdown
 # Strings
 
 This file contains static strings to be used within the application.
@@ -67,7 +67,7 @@ object Strings {
   val helloWorld = "Hello, world"
 }
 ```
-</pre>
+````
 
 Build and run it:
 
