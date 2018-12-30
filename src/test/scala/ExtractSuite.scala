@@ -4,32 +4,41 @@ import scala.io.Source
 
 class ExtractSuite extends FunSuite {
 
-  val source: String =
-    Source.fromInputStream(getClass.getResourceAsStream("/example.md")).mkString
+  def read(filename: String): String =
+    Source.fromInputStream(getClass.getResourceAsStream(filename)).mkString
 
   test("extract Scala code") {
+
+    val source: String =
+      read("/lit/example/HelloWorld.md")
+
     val expected: String =
-      """|val x = 42
-         |println(x)
+      """|package example
+         |import java.io.File
+         |import java.io.PrintWriter
+         |import example.data.Strings
+         |object HelloWorld extends App {
+         |  val pw = new PrintWriter(new File("./target/hello-world.txt"))
+         |  pw.write(Strings.helloWorld)
+         |  pw.close
+         |}
          |""".stripMargin
+
     assert(Extract(source, "scala") === expected)
   }
 
-  test("extract JavaScript code") {
-    val expected: String =
-      """|var x = 42;
-         |console.log(x);
-         |""".stripMargin
-    assert(Extract(source, "javascript") === expected)
-  }
+  test("extract Java code") {
 
-  test("extract Haskell code") {
+    val source: String =
+      read("/lit/example/data/Strings.md")
+
     val expected: String =
-      """|x :: Int
-         |x = 42
-         |main :: IO ()
-         |main = putStrLn $ show x
+      """|package example.data;
+         |public class Strings {
+         |  public static String helloWorld = "Hello, world";
+         |}
          |""".stripMargin
-    assert(Extract(source, "haskell") === expected)
+
+    assert(Extract(source, "java") === expected)
   }
 }
