@@ -1,17 +1,18 @@
 # Strings
 
 This file contains static strings to be used within the application.
+Note how we can mix Scala code in HelloWorld.md with Java code here.
 
-The code lives in the `example.data` package:
+This code lives in the `example.data` package:
 
-```scala
-package example.data
+```java
+package example.data;
 ```
 
 The `Strings` object provides access to the static strings:
 
-```scala
-object Strings {
-  val helloWorld = "Hello, world"
+```java
+public class Strings {
+  public static String helloWorld = "Hello, world";
 }
 ```
