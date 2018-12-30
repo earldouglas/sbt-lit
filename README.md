@@ -11,7 +11,6 @@ Add the sbt-lit plugin to your project:
 *project/plugins.sbt:*
 
 ```scala
-resolvers += Resolver.bintrayIvyRepo("earldouglas", "sbt-plugins")
 addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.3")
 ```
 
