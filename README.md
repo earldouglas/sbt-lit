@@ -53,18 +53,19 @@ object HelloWorld extends App {
 # Strings
 
 This file contains static strings to be used within the application.
+Note how we can mix Scala code in HelloWorld.md with Java code here.
 
-The code lives in the `example.data` package:
+This code lives in the `example.data` package:
 
-```scala
-package example.data
+```java
+package example.data;
 ```
 
 The `Strings` object provides access to the static strings:
 
-```scala
-object Strings {
-  val helloWorld = "Hello, world"
+```java
+public class Strings {
+  public static String helloWorld = "Hello, world"
 }
 ```
 ````
@@ -84,3 +85,6 @@ Hello, world!
     * Type: `File`
     * Default: `litSource := (sourceDirectory in Compile).value / "lit"`
       *(src/main/lit)*
+* `litLangs` - languages to extract from literate files
+    * Type: `Seq[File]`
+    * Default: `litLangs := Seq("scala", "java")`

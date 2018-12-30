@@ -10,7 +10,7 @@ The code in this file lives in the `example` package:
 package example
 ```
 
-A couple of dependencies are needed:
+A few imports will be needed:
 
 ```scala
 import java.io.File
