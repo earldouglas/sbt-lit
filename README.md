@@ -14,7 +14,7 @@ Add the sbt-lit plugin to your project:
 addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.3")
 ```
 
-Write some literate Scala code:
+Write some literate code:
 
 *src/main/lit/example/HelloWorld.md:*
 
