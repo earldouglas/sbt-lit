@@ -65,7 +65,7 @@ The `Strings` object provides access to the static strings:
 
 ```java
 public class Strings {
-  public static String helloWorld = "Hello, world"
+  public static String helloWorld = "Hello, world";
 }
 ```
 ````
