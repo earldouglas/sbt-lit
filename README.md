@@ -11,7 +11,7 @@ Add the sbt-lit plugin to your project:
 *project/plugins.sbt:*
 
 ```scala
-addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.3")
+addSbtPlugin("com.earldouglas" % "sbt-lit" % "0.0.4")
 ```
 
 Write some literate code:
