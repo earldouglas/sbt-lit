@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/earldouglas/sbt-lit.svg?branch=master)](https://travis-ci.org/earldouglas/sbt-lit)
+![Build Status](https://github.com/earldouglas/sbt-lit/workflows/build/badge.svg)
 
 ## Requirements
 
