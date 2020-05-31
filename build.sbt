@@ -3,7 +3,7 @@ organization := "com.earldouglas"
 name := "sbt-lit"
 
 // build
-scalaVersion := "2.12.8"
+scalaVersion := "2.12.11"
 scalacOptions ++= Seq( "-deprecation"
                      , "-encoding", "utf8"
                      , "-feature"
@@ -20,6 +20,7 @@ scalacOptions ++= Seq( "-deprecation"
                      , "-Ywarn-unused-import"
                      )
 sbtPlugin := true
+enablePlugins(SbtPlugin)
 libraryDependencies += "com.vladsch.flexmark" % "flexmark-all" % "0.40.0"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 
