@@ -23,7 +23,7 @@ crossSbtVersions := Seq("1.0.0")
 sbtPlugin := true
 enablePlugins(SbtPlugin)
 libraryDependencies += "com.vladsch.flexmark" % "flexmark-all" % "0.62.2"
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.1" % "test"
 
 // publish
 publishMavenStyle := false

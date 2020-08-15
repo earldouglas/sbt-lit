@@ -1,8 +1,8 @@
 import com.earldouglas.sbtlit.Extract
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 import scala.io.Source
 
-class ExtractSuite extends FunSuite {
+class ExtractSuite extends AnyFunSuite {
 
   def read(filename: String): String =
     Source.fromInputStream(getClass.getResourceAsStream(filename)).mkString
