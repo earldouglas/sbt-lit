@@ -3,7 +3,7 @@ package com.earldouglas.sbtlit
 import com.vladsch.flexmark.ast.FencedCodeBlock
 import com.vladsch.flexmark.parser.Parser
 import com.vladsch.flexmark.util.ast.Node
-import com.vladsch.flexmark.util.options.MutableDataSet
+import com.vladsch.flexmark.util.data.MutableDataSet
 import scala.collection.JavaConverters._
 
 object Extract {
