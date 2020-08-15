@@ -1,4 +1,5 @@
-![Build Status](https://github.com/earldouglas/sbt-lit/workflows/build/badge.svg)
+[![Build status](https://github.com/earldouglas/sbt-lit/workflows/build/badge.svg)](https://github.com/earldouglas/sbt-lit/actions)
+[![Latest version](https://img.shields.io/github/tag/earldouglas/sbt-lit.svg)](https://index.scala-lang.org/earldouglas/sbt-lit)
 
 ## Requirements
 
