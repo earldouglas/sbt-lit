@@ -3,7 +3,7 @@
 
 ## Requirements
 
-* sbt 1.0.0+
+* sbt 1.0.1+
 
 ## Getting started
 
