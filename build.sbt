@@ -19,7 +19,6 @@ scalacOptions ++= Seq( "-deprecation"
                      , "-Ywarn-unused"
                      , "-Ywarn-unused-import"
                      )
-crossSbtVersions := Seq("1.0.0")
 sbtPlugin := true
 enablePlugins(SbtPlugin)
 libraryDependencies += "com.vladsch.flexmark" % "flexmark-all" % "0.62.2"
