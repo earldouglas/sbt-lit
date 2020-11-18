@@ -4,7 +4,6 @@ name := "sbt-lit"
 
 // build
 scalaVersion := "2.12.12"
-crossSbtVersions := Seq("1.0.0")
 scalacOptions ++= Seq( "-deprecation"
                      , "-encoding", "utf8"
                      , "-feature"
