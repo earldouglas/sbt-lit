@@ -4,6 +4,7 @@
 ## Requirements
 
 * sbt 1.0.0+
+* Scala 2.10.2+
 
 ## Getting started
 
