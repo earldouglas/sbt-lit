@@ -18,7 +18,7 @@ object SbtLit extends AutoPlugin {
 
   override val projectSettings: Seq[Def.Setting[_]] =
     Seq( watchSources += new Source(litSource.value, AllPassFilter, NothingFilter)
-       , litSource := (sourceDirectory in Compile).value / "lit"
+       , litSource := (Compile / sourceDirectory).value / "lit"
        , litLangs := Seq("scala", "java")
        ) ++ inConfig(Compile) {
       sourceGenerators +=
