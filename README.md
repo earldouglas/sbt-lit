@@ -3,7 +3,7 @@
 
 ## Requirements
 
-* sbt 1.0.0+
+* sbt 1.1.0+
 * Scala 2.10.2+
 
 ## Getting started
