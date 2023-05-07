@@ -21,7 +21,7 @@ scalacOptions ++= Seq( "-deprecation"
                      )
 sbtPlugin := true
 enablePlugins(SbtPlugin)
-libraryDependencies += "com.vladsch.flexmark" % "flexmark-all" % "0.62.2"
+libraryDependencies += "com.vladsch.flexmark" % "flexmark-all" % "0.64.4"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15" % "test"
 
 // scripted-plugin
