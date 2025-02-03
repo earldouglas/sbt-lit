@@ -1,5 +1,6 @@
-[![Build status](https://github.com/earldouglas/sbt-lit/workflows/build/badge.svg)](https://github.com/earldouglas/sbt-lit/actions)
-[![Latest version](https://img.shields.io/github/tag/earldouglas/sbt-lit.svg)](https://index.scala-lang.org/earldouglas/sbt-lit)
+[![Build status](https://github.com/earldouglas/sbt-lit/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/earldouglas/sbt-lit/actions/workflows/build.yml)
+[![Latest version](https://img.shields.io/github/v/tag/earldouglas/sbt-lit)](https://github.com/earldouglas/sbt-lit/tags)
+[![Maven Central](https://img.shields.io/maven-central/v/com.earldouglas/sbt-lit_2.12_1.0)](https://repo1.maven.org/maven2/com/earldouglas/sbt-lit_2.12_1.0/)
 
 ## Requirements
 
