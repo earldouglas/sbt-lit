@@ -3,7 +3,7 @@ organization := "com.earldouglas"
 name := "sbt-lit"
 
 // build
-scalaVersion := "2.12.20"
+scalaVersion := "2.12.21"
 scalacOptions ++= Seq( "-deprecation"
                      , "-encoding", "utf8"
                      , "-feature"
